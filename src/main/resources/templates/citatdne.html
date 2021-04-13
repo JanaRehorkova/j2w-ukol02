@@ -5,15 +5,13 @@
     <title>Citát dne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link th:href="@{/css/style.css}">
-    <link rel="icon" type="image/png" th:href="@{/images/favicon.png}">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
 </head>
-<body>
-<div th:style="'background:url('${obrazek}');'">
-<strong>Citat dne:</strong>
+<body style="background-image: url(https://source.unsplash.com/RFHFV7lVQBY/1600x900)" th:style="'background-image: url(' + ${obrazek} + ');'">
 <blockquote>
+    <strong>Citát dne:</strong>
 <span th:text="${citat}">Citat</span>
 </blockquote>
-</div>
 </body>
 </html>
